@@ -7,26 +7,40 @@
 <meta name="description" content="Computer Science student building dashboards, interfaces and websites.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="dot" id="dot"></div>
+<div class="ring" id="ring"></div>
+
 <header class="top">
   <a href="#" class="brand">Jamil Hyder Samo</a>
   <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>I turn data into dashboards, and ideas into interfaces.</h1>
-      <p>Computer Science student at SZABIST Islamabad. I work across Power BI, Figma and React, so the numbers, the design and the code come from one person.</p>
-      <a class="btn" href="#work">See my work</a>
+  <section class="hero" id="hero">
+    <div class="bg"></div>
+    <div class="cols"><i></i><i></i><i></i><i></i></div>
+
+    <h1 class="big" aria-live="polite">I love <span id="typed" class="acc"></span><span class="caret"></span></h1>
+
+    <div class="intro">
+      <div class="arrows">
+        <button id="prev" aria-label="Previous slide">&larr;</button>
+        <button id="next" aria-label="Next slide">&rarr;</button>
+      </div>
+      <p id="introText"></p>
     </div>
-    <figure class="chart" aria-label="Sample bar chart">
-      <figcaption>Hours spent building this site <span>(sample data, edit in script.js)</span></figcaption>
-      <div class="bars" id="bars"></div>
-    </figure>
+
+    <div class="mini"><a href="mailto:jamilhyder2004@gmail.com">jamilhyder2004@gmail.com</a></div>
+
+    <aside class="follow">
+      <span>Follow me</span><i></i>
+      <a href="https://github.com/jamilhyder2004-cyber" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:jamilhyder2004@gmail.com">Email</a>
+    </aside>
   </section>
 
   <section id="work" class="work">
@@ -37,24 +51,34 @@
       <button data-f="design">Design</button>
       <button data-f="code">Code</button>
     </div>
-    <div class="grid" id="grid"></div>
+    <div class="rows" id="rows"></div>
   </section>
 
   <section id="about" class="about">
     <h2>About</h2>
-    <div class="about-body">
-      <p>I'm a BSCS student (2023 to 2027) who likes work that is both accurate and nice to look at. I've built Power BI and Excel dashboards, designed full website and mobile app interfaces in Figma, and coded responsive sites in HTML, CSS and React.</p>
-      <p>I also interned in web development at Orum and worked as an AI-assisted social media coordinator at Softech Inc. Outside class I explore AI video generation, creative AI and cyber security.</p>
-      <ul class="tags">
-        <li>Power BI</li><li>Excel</li><li>Smartsheet</li><li>Figma</li><li>React</li><li>HTML / CSS</li><li>C++</li><li>Java</li><li>VS Code</li>
-      </ul>
+    <div class="about-grid">
+      <div>
+        <p>I'm a BSCS student (2023 to 2027) who likes work that is both accurate and good to look at. I build dashboards that explain numbers, design interfaces in Figma, and code them in HTML, CSS and React.</p>
+        <p>I interned in web development at Orum and worked as an AI-assisted social media coordinator at Softech Inc. Outside class I explore AI video generation, creative AI and cyber security.</p>
+        <ul class="tags">
+          <li>Power BI</li><li>Excel</li><li>Smartsheet</li><li>Figma</li><li>React</li><li>HTML / CSS</li><li>C++</li><li>Java</li>
+        </ul>
+      </div>
+      <div class="stats">
+        <div><b>6</b><span>projects</span></div>
+        <div><b>2</b><span>internships</span></div>
+        <div><b>3</b><span>fields: data, design, code</span></div>
+      </div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
+    <h2>Let's work together</h2>
     <p>Have a project or an internship in mind? Send me an email.</p>
-    <a class="btn" href="mailto:jamilhyder2004@gmail.com">jamilhyder2004@gmail.com</a>
+    <div class="cta">
+      <a class="btn" href="mailto:jamilhyder2004@gmail.com">jamilhyder2004@gmail.com</a>
+      <button class="ghost" id="copy">Copy email</button>
+    </div>
   </section>
 </main>
 
